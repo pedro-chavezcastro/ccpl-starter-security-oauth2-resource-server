@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.ccplsolutions</groupId>
 	<artifactId>ccpl-starter-security-oauth2-resource-server</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<name>ccpl-starter-security-oauth2-resource-server</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Starter Security Oauth2 Resource Server App</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -41,16 +41,62 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.6</version>
 				<configuration>
 					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
+						<exclude>**/*Application.*</exclude>
+						<exclude>**/entity/*</exclude>
+						<exclude>**/entity/**/*</exclude>
+						<exclude>**/constant/*</exclude>
+						<exclude>**/constant/**/*</exclude>
+						<exclude>**/config/*</exclude>
+						<exclude>**/config/**/*</exclude>
+						<exclude>**/autoconfigure/*</exclude>
+						<exclude>**/autoconfigure/**/*</exclude>
+						<exclude>**/model/*</exclude>
+						<exclude>**/model/**/*</exclude>
+						<exclude>**/dto/*</exclude>
+						<exclude>**/dto/**/*</exclude>
+						<exclude>**/exception/*</exclude>
+						<exclude>**/exception/**/*</exclude>
 					</excludes>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>jacoco-check</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<rule>
+									<element>PACKAGE</element>
+									<limits>
+										<limit>
+											<counter>LINE</counter>
+											<value>COVEREDRATIO</value>
+											<minimum>0.80</minimum>
+										</limit>
+									</limits>
+								</rule>
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

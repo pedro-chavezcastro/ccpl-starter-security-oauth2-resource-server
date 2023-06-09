@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.ccplsolutions.startersecurityoauth2resourceserver.config.HttpSecurityConfig,\
+com.ccplsolutions.startersecurityoauth2resourceserver.autoconfigure.ResourceServerAutoConfiguration
