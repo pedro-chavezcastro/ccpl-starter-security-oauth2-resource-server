@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.ccplsolutions</groupId>
 	<artifactId>ccpl-starter-security-oauth2-resource-server</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<name>ccpl-starter-security-oauth2-resource-server</name>
 	<description>Starter Security Oauth2 Resource Server App</description>
 	<properties>
@@ -19,7 +19,7 @@
 		<sonar.java.source>11</sonar.java.source>
 		<sonar.java.sources>./src/main/java</sonar.java.sources>
 		<sonar.java.binaries>target/classes</sonar.java.binaries>
-		<sonar.projectKey>tds-microservice-product</sonar.projectKey>
+		<sonar.projectKey>ccpl-starter-security-oauth2-resource-server</sonar.projectKey>
 		<sonar.exclusions>
 			**/*Application.*,
 			**/entity/*,
