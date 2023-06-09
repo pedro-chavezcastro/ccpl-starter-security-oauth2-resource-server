@@ -15,6 +15,43 @@
 	<description>Starter Security Oauth2 Resource Server App</description>
 	<properties>
 		<java.version>11</java.version>
+		<!--Start Sonarqube properties-->
+		<sonar.java.source>11</sonar.java.source>
+		<sonar.java.sources>./src/main/java</sonar.java.sources>
+		<sonar.java.binaries>target/classes</sonar.java.binaries>
+		<sonar.projectKey>tds-microservice-product</sonar.projectKey>
+		<sonar.exclusions>
+			**/*Application.*,
+			**/entity/*,
+			**/entity/**/*,
+			**/constant/*,
+			**/constant/**/*,
+			**/config/*,
+			**/config/**/*,
+			**/autoconfigure/*,
+			**/autoconfigure/**/*,
+			**/model/*,
+			**/model/**/*,
+			**/dto/*,
+			**/dto/**/*
+		</sonar.exclusions>
+		<sonar.coverage.exclusions>
+			**/*Application.*,
+			**/entity/*,
+			**/entity/**/*,
+			**/constant/*,
+			**/constant/**/*,
+			**/config/*,
+			**/config/**/*,
+			**/autoconfigure/*,
+			**/autoconfigure/**/*,
+			**/model/*,
+			**/model/**/*,
+			**/dto/*,
+			**/dto/**/*
+		</sonar.coverage.exclusions>
+		<sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<!--End Sonarqube properties-->
 	</properties>
 	<dependencies>
 		<dependency>
