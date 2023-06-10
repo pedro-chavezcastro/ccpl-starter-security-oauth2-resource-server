@@ -33,6 +33,7 @@ public class BearerTokenAccessDeniedHandler implements AccessDeniedHandler {
         response.setStatus(HttpStatus.FORBIDDEN.value());
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
         response.getWriter().write(errorJson);
+
     }
 
 }
