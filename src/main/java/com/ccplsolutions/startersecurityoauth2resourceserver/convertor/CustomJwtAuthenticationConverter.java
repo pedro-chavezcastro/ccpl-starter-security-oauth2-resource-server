@@ -26,6 +26,7 @@ public class CustomJwtAuthenticationConverter implements Converter<Jwt, Abstract
                 .collect(Collectors.toList());
 
         return new JwtAuthenticationToken(jwt, simpleGrantedAuthorities);
+
     }
 
     private Collection<String> getScopes(Jwt jwt) {
