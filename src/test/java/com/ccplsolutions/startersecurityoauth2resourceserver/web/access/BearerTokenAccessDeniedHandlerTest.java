@@ -29,7 +29,6 @@ class BearerTokenAccessDeniedHandlerTest {
 
     @Mock
     private HttpServletRequest request;
-
     @Mock
     private HttpServletResponse response;
 
