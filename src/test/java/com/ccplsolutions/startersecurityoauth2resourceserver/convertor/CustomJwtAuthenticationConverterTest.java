@@ -21,7 +21,6 @@ class CustomJwtAuthenticationConverterTest {
 
     @Mock
     private Jwt jwt;
-
     @InjectMocks
     private CustomJwtAuthenticationConverter converter;
 
