@@ -63,6 +63,7 @@ public class HttpSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @PostConstruct
     public void configureAuthorization() {
+
         if (!properties.isEnable()) {
             Optional.ofNullable(methodInterceptor)
                     .map(MethodSecurityInterceptor.class::cast)
@@ -75,6 +76,7 @@ public class HttpSecurityConfig extends WebSecurityConfigurerAdapter {
                     .map(AffirmativeBased::getDecisionVoters)
                     .ifPresent(accessDecisionVoters -> accessDecisionVoters.removeIf(voter -> voter instanceof PreInvocationAuthorizationAdviceVoter));
         }
+
     }
 
 }
