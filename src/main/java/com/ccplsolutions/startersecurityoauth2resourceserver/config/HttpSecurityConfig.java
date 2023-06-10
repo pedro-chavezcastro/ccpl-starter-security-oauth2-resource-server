@@ -59,6 +59,7 @@ public class HttpSecurityConfig extends WebSecurityConfigurerAdapter {
                     .anyRequest()
                     .permitAll();
         }
+
     }
 
     @PostConstruct
