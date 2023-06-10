@@ -29,7 +29,6 @@ class BearerTokenAuthenticationEntryPointTest {
     private HttpServletRequest request;
     @Mock
     private HttpServletResponse response;
-
     @InjectMocks
     private BearerTokenAuthenticationEntryPoint entryPoint;
 
