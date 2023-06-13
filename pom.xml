@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.ccplsolutions</groupId>
 	<artifactId>ccpl-starter-security-oauth2-resource-server</artifactId>
-	<version>1.0.4</version>
+	<version>1.0.5</version>
 	<name>ccpl-starter-security-oauth2-resource-server</name>
 	<description>Starter Security Oauth2 Resource Server App</description>
 	<properties>
